@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews | Cinemax</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Cine<span>max</span></a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav"><a href="index.html">Home</a><a href="movies.html">Movies</a><a href="favorites.html">Favorites</a><a class="active" href="reviews.html">Reviews</a><a href="contact.html">Contact</a><button class="theme-btn" id="themeBtn">☾</button></nav></div></header>
+<main class="page"><div class="container two-col"><section><div class="page-title"><p class="eyebrow">COMMUNITY</p><h1>Reviews & Ratings</h1><p>Share what you thought about a movie.</p></div>
+<form class="form-card" id="reviewForm"><label>Name<input id="reviewName" required maxlength="40"></label><label>Email<input id="reviewEmail" type="email" required></label><label>Movie<select id="reviewMovie" required></select></label><label>Rating<select id="reviewRating" required><option value="">Choose</option><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></label><label>Your Review<textarea id="reviewText" required minlength="10" maxlength="300"></textarea></label><button class="btn primary" type="submit">Submit Review</button><p class="form-message" id="reviewMessage"></p></form></section>
+<section><h2 class="side-title">Latest Reviews</h2><div id="reviewList"></div></section></div></main>
+<footer></footer><script src="js/movies.js"></script><script src="js/app.js"></script><script src="js/reviews.js"></script></body></html>

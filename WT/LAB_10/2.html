@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .image-card {
+            width: 300px;
+            padding: 15px;
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .image-card h1,
+        .image-card h2,
+        .image-card h3 {
+            margin: 10px 0 15px;
+            font-size: 24px;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding: 20px;
+            }
+
+            .image-card {
+                width: 250px;
+            }
+
+            .image-card h1,
+            .image-card h2,
+            .image-card h3 {
+                font-size: 20px;
+            }
+
+            .image-card img {
+                height: 170px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .image-card {
+                width: 90%;
+                max-width: 300px;
+                border: 2px solid yellow;
+            }
+
+            .image-card h1,
+            .image-card h2,
+            .image-card h3 {
+                font-size: 18px;
+            }
+
+            .image-card img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .image-card {
+                width: 100%;
+            }
+
+            .image-card h1,
+            .image-card h2,
+            .image-card h3 {
+                font-size: 16px;
+            }
+
+            .image-card img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="image-card">
+            <h1>Moon Image</h1>
+            <img src="https://www.equinetmedia.com/hubfs/How-to-find-b2b-blog-images.png" alt="Moon Image">
+        </div>
+
+        <div class="image-card">
+            <h2>KTM Superbike</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpP_75ti6HuAEdaPyEiSIsjPkNx5LLfrVLGBLz8itwH_xGII-y99fMT1E&s=10"
+                alt="KTM Superbike">
+        </div>
+
+        <div class="image-card">
+            <h3>RE Hunter</h3>
+            <img src="https://media.zigcdn.com/media/model/2026/Mar/hunter-right-side-view_600x400.jpg"
+                alt="Royal Enfield Hunter">
+        </div>
+
+        <div class="image-card">
+            <h3>RE Super Metor 650</h3>
+            <img src="https://www.bikewale.com/n/cw/ec/108885/super-meteor-750-right-side-view-6.png?isig=0"
+                alt="Royal Enfield Hunter">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

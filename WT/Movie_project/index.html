@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cinemax | Movie Information Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="container nav-wrap">
+
+            <a href="index.html" class="logo">
+                Cine<span>max</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <nav id="mainNav">
+
+                <a href="index.html" class="active">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+
+                <button class="theme-btn" id="themeBtn">☾</button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero Banner -->
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <p class="eyebrow">
+                MOVIE INFORMATION PORTAL
+            </p>
+
+            <h1>
+                Find a movie.<br>
+                <span>Find your next story.</span>
+            </h1>
+
+            <p>
+                Browse movies, check details, save favorites
+                and share your reviews — all in one place.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="movies.html" class="btn primary">
+                    Explore Movies
+                </a>
+
+                <a href="movies.html?genre=Sci-Fi" class="btn ghost">
+                    Explore Sci-Fi
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Movies -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div>
+
+                    <p class="eyebrow">
+                        HANDPICKED
+                    </p>
+
+                    <h2>
+                        Featured Movies
+                    </h2>
+
+                </div>
+
+                <a href="movies.html" class="text-link">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="movie-grid">
+
+                <!-- Movie 1 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8m0t3PPsnYpcB6V-HGfpcT8f7bsmJOgG2dlTWje149w&s=10"
+                        class="poster"
+                        alt="Inception">
+
+                    <div class="card-body">
+
+                        <h3>Inception</h3>
+
+                        <p class="meta">
+                            Sci-Fi • 2010 • ⭐ 8.8
+                        </p>
+
+                        <p class="desc">
+                            A skilled thief enters people's dreams
+                            to steal secrets and ideas.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=1" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Movie 2 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                        class="poster"
+                        alt="Interstellar">
+
+                    <div class="card-body">
+
+                        <h3>Interstellar</h3>
+
+                        <p class="meta">
+                            Sci-Fi • 2014 • ⭐ 8.7
+                        </p>
+
+                        <p class="desc">
+                            Explorers travel through space searching
+                            for a new home for humanity.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=2" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Movie 3 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQANc73XxPRz9HjK8sSh81JW6UvwQ0TqIAFU3jIyo2x_A&s"
+                        class="poster"
+                        alt="The Dark Knight">
+
+                    <div class="card-body">
+
+                        <h3>The Dark Knight</h3>
+
+                        <p class="meta">
+                            Action • 2008 • ⭐ 9.0
+                        </p>
+
+                        <p class="desc">
+                            Batman faces a dangerous criminal who
+                            challenges Gotham City.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=3" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+               
+                </div>
+                 <!-- Movie 4 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYL7ZbDykm-SmgSYtnG1fYPx-Bhs2Qa3_GdpfuuFDg0A&s"
+                        class="poster"
+                        alt="Deadpool">
+
+                    <div class="card-body">
+
+                        <h3>Deadpool</h3>
+
+                        <p class="meta">
+                            Sci-Fi • 2014 • ⭐ 8.7
+                        </p>
+
+                        <p class="desc">
+                            Deadpool is a popular comic book antihero 
+                            from Marvel Comics.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=2" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Movies -->
+    <section class="section soft">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div>
+
+                    <p class="eyebrow">
+                        WHAT PEOPLE WATCH
+                    </p>
+
+                    <h2>
+                        Popular Picks
+                    </h2>
+
+                </div>
+
+                <a href="movies.html" class="text-link">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="movie-grid">
+
+                <!-- Movie 4 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xJnD47jFRj7DLa1hQSTIED7uv7ptvCBS6XPkjNNolQ&s"
+                        class="poster"
+                        alt="Avengers">
+
+                    <div class="card-body">
+
+                        <h3>Avengers: Endgame</h3>
+
+                        <p class="meta">
+                            Action • 2019 • ⭐ 8.4
+                        </p>
+
+                        <p class="desc">
+                            The Avengers come together for one final
+                            battle to save the universe.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=4" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Movie 5 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTad574MHYWq-d5nRV4uOUBpCxSHyU0wx8Q3bjkjRow3A&s=10"
+                        class="poster"
+                        alt="Joker">
+
+                    <div class="card-body">
+
+                        <h3>Joker</h3>
+
+                        <p class="meta">
+                            Drama • 2019 • ⭐ 8.4
+                        </p>
+
+                        <p class="desc">
+                            A troubled man slowly transforms into
+                            the famous Gotham villain.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=5" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Movie 6 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDrV6LOERV39hZcObjeDAUMClS5NqycGyEi6WWZ2bnig&s=10"
+                        class="poster"
+                        alt="Avatar">
+
+                    <div class="card-body">
+
+                        <h3>Avatar</h3>
+
+                        <p class="meta">
+                            Sci-Fi • 2009 • ⭐ 7.9
+                        </p>
+
+                        <p class="desc">
+                            A marine discovers a new world and becomes
+                            part of an extraordinary conflict.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=6" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Movie 7 -->
+                <div class="movie-card">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDx4OihfMF3RO6iQSxi1REeFuQ9RTVKhsnk1_cIlAnCg&s"
+                        class="poster"
+                        alt="Spider-Man">
+
+                    <div class="card-body">
+
+                        <h3>Spider-Man</h3>
+
+                        <p class="meta">
+                            Action • 2021 • ⭐ 8.2
+                        </p>
+
+                        <p class="desc">
+                            A young hero protects his city while
+                            dealing with new challenges.
+                        </p>
+
+                        <div class="card-actions">
+
+                            <a href="movie-details.html?id=7" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button class="fav-btn">
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Genres -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div>
+
+                    <p class="eyebrow">
+                        BROWSE BY
+                    </p>
+
+                    <h2>
+                        Movie Genres
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="genre-grid">
+
+                <a href="movies.html?genre=Action">
+                    Action
+                    <span>→</span>
+                </a>
+
+                <a href="movies.html?genre=Drama">
+                    Drama
+                    <span>→</span>
+                </a>
+
+                <a href="movies.html?genre=Sci-Fi">
+                    Sci-Fi
+                    <span>→</span>
+                </a>
+
+                <a href="movies.html?genre=Comedy">
+                    Comedy
+                    <span>→</span>
+                </a>
+
+                <a href="movies.html?genre=Thriller">
+                    Thriller
+                    <span>→</span>
+                </a>
+
+                <a href="movies.html?genre=Animation">
+                    Animation
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            © 2026 Cinemax • Movie Information Portal
+        </div>
+
+    </footer>
+
+
+    <script src="movies.js"></script>
+    <script src="app.js"></script>
+    <script src="home.js"></script>
+
+</body>
+
+</html>

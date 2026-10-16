@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu {
+            display: none;
+            margin-top: 10px;
+            padding: 8px 14px;
+            border: 0;
+            border-radius: 5px;
+            background: white;
+            color: #2563eb;
+            cursor: pointer;
+        }
+
+        .layout {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .extra-content {
+            margin-top: 25px;
+            padding: 20px;
+            background: #e0ecff;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: inline-block;
+            }
+
+            main {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .layout {
+                margin: 10px auto;
+                padding: 0 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .extra-content {
+                display: none;
+            }
+
+            main h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Website</h1>
+        <button class="mobile-menu">☰ Menu</button>
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Welcome</h2>
+            <p>
+                Resize the browser window to see the responsive behavior.
+                The sidebar disappears on tablets and mobile devices.
+            </p>
+
+            <section class="extra-content">
+                <h3>Extra Content</h3>
+                <p>
+                    This section is visible on larger screens but hidden
+                    on small mobile screens.
+                </p>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+
+</html>

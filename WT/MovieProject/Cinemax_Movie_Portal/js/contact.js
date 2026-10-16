@@ -1,0 +1,3 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("contactForm").onsubmit=e=>{e.preventDefault();const email=document.getElementById("contactEmail").value,msg=document.getElementById("contactMessageBox");if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){msg.textContent="Please enter a valid email address.";return}msg.textContent="Thank you! Your message has been recorded for this demo.";e.target.reset()}
+});

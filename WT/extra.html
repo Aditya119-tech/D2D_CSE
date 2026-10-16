@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Code</title>
+</head>
+<body>
+
+    <h2>Press any key on the keyboard</h2>
+    <p id="result"></p>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("result").innerHTML =
+                "Key Pressed: " + event.key +
+                "<br>Key Code: " + event.keyCode;
+        });
+    </script>
+
+</body>
+</html>

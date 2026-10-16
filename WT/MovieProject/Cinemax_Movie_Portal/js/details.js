@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ const id=Number(new URLSearchParams(location.search).get("id"))||1,m=movies.find(x=>x.id===id),box=document.getElementById("details");
+ if(!m){box.innerHTML="<div class='empty'>Movie not found.</div>";return}
+ box.innerHTML=`<div class="details"><img class="details-poster" src="${m.poster}" alt="${m.title} poster"><section><p class="eyebrow">MOVIE DETAILS</p><h1>${m.title}</h1><div class="detail-meta"><span class="pill">${m.genre}</span><span class="pill">${m.year}</span><span class="pill">${m.language}</span><span class="pill">⭐ ${m.rating}/10</span></div><p class="detail-desc">${m.description}</p><div class="info-list"><b>Duration</b><span>${m.duration}</span><b>Director</b><span>${m.director}</span><b>Cast</b><span>${m.cast}</span><b>Language</b><span>${m.language}</span><b>Release Year</b><span>${m.year}</span><b>Rating</b><span>${m.rating}/10</span></div><div class="detail-actions"><a class="btn primary" href="${m.trailer}" target="_blank">▶ Watch Trailer</a><button class="btn ghost" id="detailFav">${isFavorite(m.id)?"♥ Remove Favorite":"♡ Add to Favorites"}</button></div></section></div>`;
+ document.getElementById("detailFav").onclick=()=>{toggleFavorite(m.id);location.reload()};
+});

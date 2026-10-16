@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moving Div</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 500px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+
+            animation: moveBox 8s linear infinite;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 500px;
+                top: 0;
+            }
+
+            50% {
+                left: 500px;
+                top: 350px;
+            }
+
+            75% {
+                left: 0;
+                top: 350px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Animation and Pseudo Elements</title>
+
+    <style>
+        /* ==============================
+           GENERAL STYLING
+        ============================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+
+        /* ==============================
+           1(a) BACKGROUND COLOR ANIMATION
+        ============================== */
+
+        .color-box {
+            width: 120px;
+            height: 120px;
+            background-color: red;
+
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+
+        /* ==============================
+           1(b) MOVING DIV
+           Left -> Right -> Bottom -> Left -> Top
+        ============================== */
+
+        .moving-area {
+            width: 600px;
+            height: 350px;
+            border: 2px solid black;
+            position: relative;
+            background-color: #eee;
+        }
+
+        .moving-box {
+            width: 70px;
+            height: 70px;
+            background-color: blue;
+            position: absolute;
+
+            animation-name: moveBox;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            /* 2 second delay */
+            animation-delay: 2s;
+        }
+
+        @keyframes moveBox {
+
+            /* Top-left */
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            /* Top-right */
+            25% {
+                left: 530px;
+                top: 0;
+            }
+
+            /* Bottom-right */
+            50% {
+                left: 530px;
+                top: 280px;
+            }
+
+            /* Bottom-left */
+            75% {
+                left: 0;
+                top: 280px;
+            }
+
+            /* Top-left */
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+
+
+        /* ==============================
+           1(e) REVERSE ANIMATION
+        ============================== */
+
+        .reverse-box {
+            width: 120px;
+            height: 120px;
+            background-color: orange;
+
+            animation-name: reverseColor;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+            /* Run animation in reverse */
+            animation-direction: reverse;
+        }
+
+        @keyframes reverseColor {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+
+        /* ==============================
+           1(f) TIMING FUNCTION
+        ============================== */
+
+        .speed-box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+
+            animation-name: speedAnimation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+            /* Controls animation speed */
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes speedAnimation {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(400px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+
+        /* ==============================
+           2(a) LINK :LINK AND :VISITED
+        ============================== */
+
+        .links a:link {
+            color: orange;
+        }
+
+        .links a:visited {
+            color: red;
+        }
+
+
+        /* ==============================
+           2(b) ::FIRST-LINE
+        ============================== */
+
+        .first-line::first-line {
+            color: blue;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           2(c) ::FIRST-LETTER
+        ============================== */
+
+        .first-letter::first-letter {
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           2(d) ::SELECTION
+        ============================== */
+
+        .selection::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+
+        /* ==============================
+           2(e) :HOVER
+        ============================== */
+
+        .hover-box {
+            width: 250px;
+            height: 100px;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.5s;
+        }
+
+        .hover-box:hover {
+            background-color: yellow;
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+            transform: scale(1.1);
+        }
+
+
+        /* ==============================
+           3 CUSTOM ANIMATION
+           Bouncing Ball
+        ============================== */
+
+        .custom-area {
+            width: 600px;
+            height: 350px;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ball {
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+
+            animation-name: bounceBall;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounceBall {
+
+            0% {
+                left: 0;
+                top: 0;
+                background-color: red;
+            }
+
+            25% {
+                left: 250px;
+                top: 280px;
+                background-color: yellow;
+            }
+
+            50% {
+                left: 500px;
+                top: 0;
+                background-color: blue;
+            }
+
+            75% {
+                left: 250px;
+                top: 280px;
+                background-color: green;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+                background-color: red;
+            }
+        }
+
+
+        /* ==============================
+           4 SCREEN SAVER ANIMATION
+        ============================== */
+
+        .screen-saver {
+            width: 600px;
+            height: 350px;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen-ball {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .ball1 {
+            background-color: red;
+            animation: screenMove1 6s linear infinite;
+        }
+
+        .ball2 {
+            background-color: yellow;
+            animation: screenMove2 8s linear infinite;
+        }
+
+        .ball3 {
+            background-color: cyan;
+            animation: screenMove3 10s linear infinite;
+        }
+
+
+        /* Red ball */
+        @keyframes screenMove1 {
+
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 555px;
+                top: 0;
+            }
+
+            50% {
+                left: 555px;
+                top: 305px;
+            }
+
+            75% {
+                left: 0;
+                top: 305px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+
+
+        /* Yellow ball */
+        @keyframes screenMove2 {
+
+            0% {
+                left: 555px;
+                top: 305px;
+            }
+
+            25% {
+                left: 0;
+                top: 305px;
+            }
+
+            50% {
+                left: 0;
+                top: 0;
+            }
+
+            75% {
+                left: 555px;
+                top: 0;
+            }
+
+            100% {
+                left: 555px;
+                top: 305px;
+            }
+        }
+
+
+        /* Cyan ball */
+        @keyframes screenMove3 {
+
+            0% {
+                left: 275px;
+                top: 0;
+            }
+
+            25% {
+                left: 555px;
+                top: 150px;
+            }
+
+            50% {
+                left: 275px;
+                top: 305px;
+            }
+
+            75% {
+                left: 0;
+                top: 150px;
+            }
+
+            100% {
+                left: 275px;
+                top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>CSS3 Animation Demonstration</h1>
+
+
+    <!-- =========================================
+         QUESTION 1
+    ========================================== -->
+
+    <section>
+
+        <h2>1(a) Background Color Animation</h2>
+
+        <p>
+            The box changes its background color from
+            <b>red to yellow</b>.
+        </p>
+
+        <div class="color-box"></div>
+
+
+        <h2>1(b) Moving Div</h2>
+
+        <p>
+            The box moves:
+            <b>Left → Right → Bottom → Left → Top</b>
+        </p>
+
+        <div class="moving-area">
+            <div class="moving-box"></div>
+        </div>
+
+
+        <h2>1(c) Animation Delay</h2>
+
+        <p>
+            The moving box above has an
+            <b>animation-delay: 2s</b>.
+        </p>
+
+
+        <h2>1(d) Infinite Animation</h2>
+
+        <p>
+            The animations use:
+            <b>animation-iteration-count: infinite;</b>
+        </p>
+
+
+        <h2>1(e) Reverse Animation</h2>
+
+        <p>
+            The following box uses:
+            <b>animation-direction: reverse;</b>
+        </p>
+
+        <div class="reverse-box"></div>
+
+
+        <h2>1(f) Animation Timing Function</h2>
+
+        <p>
+            This animation uses:
+            <b>animation-timing-function: ease-in-out;</b>
+        </p>
+
+        <div class="speed-box"></div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUESTION 2
+    ========================================== -->
+
+    <section>
+
+        <h2>2(a) Link :link and :visited</h2>
+
+        <div class="links">
+
+            <p>
+                <a href="https://www.google.com">
+                    Google
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.wikipedia.org">
+                    Wikipedia
+                </a>
+            </p>
+
+        </div>
+
+        <p>
+            Unvisited links are <b>orange</b>.
+            Visited links are <b>red</b>.
+        </p>
+
+
+        <h2>2(b) ::first-line</h2>
+
+        <p class="first-line">
+            This is the first line of the paragraph and it has special styling.
+            The remaining text has normal styling. CSS provides many useful
+            pseudo-elements and pseudo-classes.
+        </p>
+
+
+        <h2>2(c) ::first-letter</h2>
+
+        <p class="first-letter">
+            This paragraph has a special style applied to its first letter.
+            The first letter is larger and red in color.
+        </p>
+
+
+        <h2>2(d) ::selection</h2>
+
+        <p class="selection">
+            Select this text with your mouse. The selected background will
+            become yellow.
+        </p>
+
+
+        <h2>2(e) :hover</h2>
+
+        <p>
+            Move the mouse over the box:
+        </p>
+
+        <div class="hover-box">
+            Hover Over Me
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUESTION 3
+    ========================================== -->
+
+    <section>
+
+        <h2>3. Custom Animation – Bouncing Ball</h2>
+
+        <p>
+            A custom animation where a ball moves around and changes color.
+        </p>
+
+        <div class="custom-area">
+            <div class="ball"></div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUESTION 4
+    ========================================== -->
+
+    <section>
+
+        <h2>4. Screen Saver Animation</h2>
+
+        <p>
+            Multiple colored balls move continuously around the screen.
+        </p>
+
+        <div class="screen-saver">
+
+            <div class="screen-ball ball1"></div>
+
+            <div class="screen-ball ball2"></div>
+
+            <div class="screen-ball ball3"></div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>

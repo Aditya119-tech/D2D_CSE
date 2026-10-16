@@ -1,0 +1,33 @@
+<!-- Create a feedback form where minlength, maxlength, min, and max attributes are used
+to control input length and numerical value range. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"  minlength="3" maxlength="20" required /></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="number" min="18" max="60"  required> </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" align="center"/>
+                <input type="button" value="Cancel"  /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

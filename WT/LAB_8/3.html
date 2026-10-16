@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Website Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Outer Container including side title */
+        .page-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Vertical Label on the Left */
+        .side-label {
+            color: #b3c834;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            width: 90px;
+            line-height: 1.4;
+        }
+
+        /* Layout Grid Container */
+        .layout-container {
+            display: grid;
+            grid-template-columns: 140px 1fr 140px;
+            grid-template-rows: 70px minmax(200px, auto) 60px;
+            grid-gap: 10px;
+            width: 550px;
+            background-color: #ffffff;
+        }
+
+        /* Flexbox centering utility for text inside layout blocks */
+        .block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Header Span Across 3 Columns */
+        .header {
+            grid-column: 1 / -1;
+            background-color: #c83232;
+            color: white;
+        }
+
+        /* Navigation Column */
+        .navigation {
+            grid-column: 1 / 2;
+            background-color: #2b3990;
+            color: white;
+        }
+
+        /* Content Area wrapping around Sidebar */
+        .content {
+            grid-column: 2 / 4;
+            background-color: #fce029;
+            color: #000;
+            padding: 20px;
+            display: block; /* Allows sidebar float wrapping */
+        }
+
+        .content-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        /* Floating Sidebar */
+        .sidebar {
+            float: right;
+            width: 130px;
+            height: 150px;
+            background-color: #0d6837;
+            color: white;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Span Across 3 Columns */
+        .footer {
+            grid-column: 1 / -1;
+            background-color: #29abe2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="side-label">
+            Html<br>Website<br>Layout
+        </div>
+
+        <div class="layout-container">
+            <header class="block header">Header</header>
+            <nav class="block navigation">Navigation</nav>
+            <main class="content">
+                <aside class="block sidebar">Sidebar</aside>
+                <div class="content-text">Content</div>
+            </main>
+            <footer class="block footer">Footer</footer>
+        </div>
+    </div>
+
+</body>
+</html>

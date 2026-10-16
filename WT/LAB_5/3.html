@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Account Form</title>
+</head>
+
+<body>
+
+    <center>
+        <h2>Create Account</h2>
+
+        <form>
+
+            <table cellpadding="8">
+
+                <tr>
+                    <td>First Name *</td>
+                    <td><input type="text" placeholder="Enter First Name"></td>
+
+                    <td>Last Name</td>
+                    <td><input type="text" placeholder="Enter Last Name"></td>
+                </tr>
+
+                <tr>
+                    <td>Email *</td>
+                    <td colspan="3">
+                        <input type="email" placeholder="Enter Email" size="83">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password *</td>
+                    <td><input type="password" placeholder="Enter Password"></td>
+
+                    <td>Confirm Password *</td>
+                    <td><input type="password" placeholder="Confirm Password"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender"> Male
+                        <input type="radio" name="gender"> Female
+                    </td>
+
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox"> Music
+                        <input type="checkbox"> Sports
+                        <input type="checkbox"> Travel
+                        <input type="checkbox"> Movies
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Source of Income</td>
+                    <td>
+                        <select>
+                            <option>Employed</option>
+                            <option>Business</option>
+                            <option>Student</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+
+                    <td>Income</td>
+                    <td>
+                        <input type="range" min="0" max="100000">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Upload Profile Picture</td>
+                    <td>
+                        <input type="file">
+                    </td>
+
+                    <td>Age</td>
+                    <td>
+                        <input type="number" value="18">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bio</td>
+                    <td colspan="3">
+                        <textarea rows="5" cols="78"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" align="right">
+                        <input type="submit" value="Create">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </center>
+
+</body>
+
+</html>

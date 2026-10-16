@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Website Layout</title>
+
+    <style>
+        /* Remove default browser spacing */
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        /* =========================
+           TOP BLACK BAR
+        ========================= */
+        .top-bar {
+            width: 97%;
+            height: 30px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           MAIN WEBSITE
+        ========================= */
+        .website {
+            width: 72%;
+            margin: 3px auto 8px auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+        .header {
+            width: 100%;
+            height: 52px;
+            background-color: #c92532;
+            border: 1px solid #999;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           MAIN SECTION
+        ========================= */
+        .main {
+            display: flex;
+            width: 100%;
+            height: 205px;
+            margin-top: 3px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+        .navigation {
+            width: 21%;
+            height: 100%;
+            background-color: #303495;
+            border: 1px solid #aaa;
+
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+        .content {
+            position: relative;
+            width: 58%;
+            height: 100%;
+            margin-left: 8px;
+
+            background-color: #fff21a;
+            border: 1px solid #aaa;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: black;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+        .sidebar {
+            position: absolute;
+
+            right: -72px;
+            top: 0;
+
+            width: 72px;
+            height: 138px;
+
+            background-color: #006b3c;
+            border: 2px solid #aaa;
+
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        .footer {
+            width: 100%;
+            height: 52px;
+            margin-top: 5px;
+
+            background-color: #29a8dc;
+            border: 1px solid #888;
+
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           SIDE TEXT
+        ========================= */
+        .side-text {
+            position: absolute;
+
+            left: 20px;
+            top: 137px;
+
+            color: #d5dc63;
+
+            font-size: 19px;
+            font-style: italic;
+            font-weight: bold;
+
+            line-height: 30px;
+        }
+
+        /* =========================
+           BOTTOM BLACK BAR
+        ========================= */
+        .bottom-bar {
+            width: 97%;
+            height: 32px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+        @media (max-width: 700px) {
+
+            .website {
+                width: 90%;
+            }
+
+            .main {
+                height: auto;
+                flex-direction: column;
+            }
+
+            .navigation,
+            .content {
+                width: 100%;
+                margin: 3px 0;
+                height: 150px;
+            }
+
+            .sidebar {
+                position: relative;
+                right: auto;
+                top: auto;
+
+                width: 100%;
+                height: 100px;
+                margin-top: 5px;
+            }
+
+            .main {
+                height: auto;
+            }
+
+            .side-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top black strip -->
+    <div class="top-bar"></div>
+
+
+    <!-- Website container -->
+    <div class="website">
+
+        <!-- Header -->
+        <header class="header">
+            Header
+        </header>
+
+
+        <!-- Main layout -->
+        <main class="main">
+
+            <!-- Navigation -->
+            <nav class="navigation">
+                Navigation
+            </nav>
+
+
+            <!-- Content -->
+            <section class="content">
+
+                Content
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    Sidebar
+                </aside>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            Footer
+        </footer>
+
+    </div>
+
+
+    <!-- Text on left side -->
+    <div class="side-text">
+        Html<br>
+        Website<br>
+        Layout
+    </div>
+
+
+    <!-- Bottom black strip -->
+    <div class="bottom-bar"></div>
+
+</body>
+</html>
